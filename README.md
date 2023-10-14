@@ -1,46 +1,55 @@
-# Getting Started with Create React App
+# Consultant Cep
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+Consultant Cep is a simple web application that allows users to search for CEP (ZIP code) information and display it on the screen. It also provides a light and dark mode to customize the appearance.
 
-In the project directory, you can run:
+## Ruby API
 
-### `npm start`
+This project includes a Ruby API that provides CEP information. The API can be accessed through the following endpoints:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- `GET /cep/:cep`: Returns information related to the specified CEP.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### API Usage Instructions
 
-### `npm test`
+1. Make sure the Ruby API is up and running.
+2. To query CEP information, make a GET request to the endpoint `http://localhost:4567/cep/:cep`, where `:cep` is the CEP you want to query.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Example GET request:
 
-### `npm run build`
+-GET http://localhost:4567/cep/12345678
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The response will be in JSON format containing CEP information.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation Instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Follow the provided instructions above to install and run the main application.
 
-### `npm run eject`
+1. Clone this repository:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   ```bash
+   git clone https://github.com/guifelippe/cep-consultant-react.git
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Navigate to the project directory:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+   ```bash
+   cd cep-consultant-cep
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+3. Install the dependencies:
 
-## Learn More
+    ```bash
+    npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Start the application:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ```bash
+    npm start
+
+5. Access the application in your web browser: http://localhost:3000
+
+## Usage
+
+- Enter a CEP in the search box.
+- Click the "Search" button to retrieve information.
+- The result will be displayed on the screen.
+- Use the "Dark Mode" button to toggle between light and dark modes.
